@@ -40,13 +40,31 @@
 
 //на вход число и возвращать сумму его цифр
 
-int num = 123;
-System.Console.WriteLine(Sum(num));
-Sum(num);
-int Sum(int num)
+// int num = 123;
+// System.Console.WriteLine(Sum(num));
+// Sum(num);
+// int Sum(int num)
+// {
+//     if (num == 0)
+//         return num;
+//     return Sum(num / 10) + num % 10;
+// }
+
+//возводим число А в степень В
+
+int a = 2;
+int b = 4;
+System.Console.WriteLine(Pow(a, b));
+
+int Pow(int a, int b)
 {
-    if (num == 0)
-        return num;
-    return Sum(num / 10) + num % 10;
+    if (b == 0)
+        return 1;
+    return a * Pow(a, b - 1);
 }
+
+
+
+
+
 
